@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "Users", type: :request do
-  describe "GET /index" do
+RSpec.describe 'Users', type: :request do
+  describe 'GET /index' do
     # pending "add some examples (or delete) #{__FILE__}"
-    before(:example) {get(users_path)}
+    before(:example) { get(users_path) }
     it 'check status' do
       expect(response).to have_http_status(:ok)
     end
@@ -19,6 +19,5 @@ RSpec.describe "Users", type: :request do
     it 'renders correct heading' do
       expect(response.body).to include 'Here is a list of all users'
     end
-    
   end
 end
