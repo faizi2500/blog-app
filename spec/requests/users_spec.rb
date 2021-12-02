@@ -11,12 +11,16 @@ RSpec.describe 'Users', type: :request do
       expect(response).to render_template('index')
     end
 
-    it 'check for placeholder text' do
-      expect(response.body).to include 'All Users'
+    it 'renders correct template' do
+      expect(response).to_not render_template('show')
     end
 
     it 'check for placeholder text' do
-      expect(response.body).to include 'Here is a list of all users'
+      expect(response.body).to include('All Users')
+    end
+
+    it 'check for placeholder text' do
+      expect(response.body).to include('Here is a list of all users')
     end
   end
 
@@ -31,12 +35,16 @@ RSpec.describe 'Users', type: :request do
       expect(response.body).to render_template('show')
     end
 
-    it 'check for placeholder text' do
-      expect(response.body).to include 'Users ID 745'
+    it 'renders correct template' do
+      expect(response).to_not render_template('index')
     end
 
     it 'check for placeholder text' do
-      expect(response.body).to include 'This user details'
+      expect(response.body).to include('Users ID 745')
+    end
+
+    it 'check for placeholder text' do
+      expect(response.body).to include('This user details')
     end
   end
 end
