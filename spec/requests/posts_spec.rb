@@ -11,8 +11,12 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to render_template('index')
     end
 
+    it 'renders correct template' do
+      expect(response).to_not render_template('show')
+    end
+
     it 'check for placeholder text' do
-      expect(response.body).to include 'Posts of user'
+      expect(response.body).to include('Posts of user')
     end
   end
 
@@ -26,8 +30,12 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to render_template('show')
     end
 
+    it 'renders correct template' do
+      expect(response).to_not render_template('index')
+    end
+
     it 'check for placeholder text' do
-      expect(response.body).to include 'Posts 4 by user'
+      expect(response.body).to include('Posts 4 by user')
     end
   end
 end
