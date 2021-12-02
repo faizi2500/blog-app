@@ -22,7 +22,7 @@ RSpec.describe 'Users', type: :request do
 
   describe 'GET /show' do
     before(:example) { get('/users/745') }
-    
+
     it 'check status' do
       expect(response).to have_http_status(:ok)
     end
@@ -38,6 +38,5 @@ RSpec.describe 'Users', type: :request do
     it 'check for placeholder text' do
       expect(response.body).to include 'This user details'
     end
-
   end
 end
