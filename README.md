@@ -1,24 +1,64 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Blog app
 
-Things you may want to cover:
+> In this project, I created all controllers and views for my Blog app and added simple placeholders for my views with plain HTML.
 
-* Ruby version
+## The learning objective of this project are
 
-* System dependencies
+- Use controllers to handle requests and render empty views.
+- Install Ruby on Rails framework.
+- Use Ruby Gems as a software packages system.
+- Understand Rails naming conventions.
+- Use params from browser requests in a safe way.
 
-* Configuration
 
-* Database creation
+## Built With
 
-* Database initialization
+- Ruby
+- Rails
+- Postgresql
+- Rubocop
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+To get a local copy up and running follow these simple example steps.
 
-* Deployment instructions
+### Prerequisites
 
-* ...
+- [Ruby on Rails](https://guides.rubyonrails.org/getting_started.html)
+
+### Setup
+- ```git clone git@github.com:faizi2500/blog-app.git```
+
+- ```cd blog-app```
+
+### Running The App
+
+- Run ```bundle install``` to install all the necessary gems
+- Run ```bin/rails db:create``` and ```bin/rails db:migrate``` then run ```rails s``` 
+- Go to the browser and type `localhost:3000` to see the app
+
+### Test
+
+- Run ```gem install rspec``` to install Rspec,
+
+- Run ```rspec spec``` to run all the test cases, and
+
+- Run ```rspec spec/name_of_test_file.rb``` to run test cases individually.
+
+👤 **Faizan Zahid**
+
+- GitHub: [@faizi2500 ](https://github.com/faizi2500)
+- Angelist: [@faizan_2500 ](https://angel.co/u/faizan2500)
+- LinkedIn: [@faizan2500](www.linkedin.com/in/faizan2500)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/julie-ify/covid-19-tracking-project/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
