@@ -1,2 +1,16 @@
-<h1>Posts <%= params[:id] %> by user</h1>
-<p>Following is the post(number) by use(id)</p>
+<div class="post-section give-space">
+<div class="first-half">
+  <p class="heading-post">Post #<%= @post.id%> by <%= @user.name %></p>
+  <div class="right-side">
+    <p> Likes: <%= Like.where('post_id = ?', @post.id).count %></p>
+    <p> Comments:<%= Comment.where('post_id = ?', @post.id).count %></p>
+  </div>
+</div>
+<p><%= @post.text %></p>
+</div>
+
+<div class="comment-section">
+  <% Comment.where('post_id = ?', @post.id).each do |comment| %>
+    <%= render partial: 'shared/comment', locals: {comment: comment} %>
+  <% end %>
+</div>
