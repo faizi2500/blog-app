@@ -9,6 +9,6 @@
   <%= render partial: 'shared/post_layout', locals: {post: post, index: index} %>
 <% end %>
 <div class="all-posts-cta">
-<button>See all Posts</button>
+<a href='<%= request.path %>/posts'><button>See all Posts</button></a>
 </div>
 <%= render partial: 'shared/footer' %>

@@ -1,5 +1,5 @@
 <div class="post-section">
-  <p>Post #<%= index + 1 %></p>
+  <a href='<%= request.path %>/<%=post.id%>'><p>Post #<%= index + 1 %></p></a>
   <p class="post-text"><%=post.text%> </p>
   <div class="reaction">
     <p> Likes: <%= Like.where('post_id = ?', post.id).count %></p>
