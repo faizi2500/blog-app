@@ -1,2 +1,4 @@
-<h1>All Users</h1>
-<p>Here is a list of all users</p>
+<% @users.each do |user| %>
+  <%= render partial: 'shared/user_layout', locals: {user: user} %>
+<% end %>
+<%= render 'shared/footer' %>
