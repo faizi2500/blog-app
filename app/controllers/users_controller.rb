@@ -16,15 +16,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def calc_posts(user)
-    @posts_by_user = []
-    Post.all.order('created_at DESC').each do |post|
-      @posts_by_user.push(post) if post.user_id == user.id
-    end
-    user.post_counter = @posts_by_user.length
-    @posts_by_user
-  end
-
   # def calc_comments(user, post)
   #   @comment_list
   #   Comment.all.each do |comment|
