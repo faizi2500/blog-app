@@ -39,6 +39,11 @@ body {
   border-block: 2px solid black;
   padding: 12px;
   background-color: grey;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .bio {
@@ -79,6 +84,30 @@ body {
   padding: 0;
 }
 
+.give-space {
+  margin-top: 2.5rem;
+}
+
+.comment-section {
+  width: 95%;
+  margin: auto;
+  border: 1px solid black;
+  margin-bottom: 5%;
+}
+
 .all-posts-cta {
   text-align: center;
+  margin-bottom: 15px;
+}
+
+.first-half {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-side {
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5%;
 }
