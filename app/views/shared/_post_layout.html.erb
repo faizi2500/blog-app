@@ -1,0 +1,9 @@
+<div class="post-section">
+  <p>Post #<%= index + 1 %></p>
+  <p class="post-text"><%=post.text%> </p>
+  <div class="reaction">
+    <p> Likes: <%= Like.where('post_id = ?', post.id).count %></p>
+    <p> Comments:<%= Comment.where('post_id = ?', post.id).count %></p>
+  </div>
+</div>
+<br>
