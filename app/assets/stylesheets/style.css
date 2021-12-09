@@ -62,7 +62,6 @@ body {
   font-size: 1.3rem;
 }
 
-
 .post-section {
   width: 95%;
   margin: 1px auto 1px auto;
@@ -110,4 +109,10 @@ body {
   display: flex;
   justify-content: space-around;
   gap: 1.5%;
+}
+
+.view-post {
+  width:30%;
+  margin: auto;
+  text-align: center;
 }
