@@ -2,9 +2,12 @@
 <% @posts_by_user.each_with_index do |post, index| %>
   <%= render partial: 'shared/post_layout', locals: {post: post, index: index} %>
   <div class="comment-section">
-  <% Comment.where('post_id = ?', post.id).each do |comment| %>
+  <% post.recent_comments.each do |comment| %>
     <%= render partial: 'shared/comment', locals: {comment: comment} %>
   <% end %>
+  </div>
+  <div class="view-post">
+    <a href='<%= request.path %>/<%= post.id %>'>View Post <%= index + 1 %></a>
   </div>
 <% end %>
 <div class="all-posts-cta">

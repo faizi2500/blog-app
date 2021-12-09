@@ -10,7 +10,7 @@
 </div>
 
 <div class="comment-section">
-  <% Comment.where('post_id = ?', @post.id).each do |comment| %>
+  <% list_comments(@post.id).each do |comment| %>
     <%= render partial: 'shared/comment', locals: {comment: comment} %>
   <% end %>
 </div>
