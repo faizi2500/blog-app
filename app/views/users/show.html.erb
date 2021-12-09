@@ -1,9 +1,13 @@
+<%= render "shared/nav" %>
 <%= render partial: 'shared/user_layout', locals: {user: @user} %>
 <div class="bio">
 <h4 class="bio-heading">Bio</h4>
 <p><%= @user.bio %></p>
 </div>
 <br>
+<div class='all-posts-cta'>
+  <button class="btn"><%= link_to 'Create New Post', new_user_post_path(@user.id) %></button>
+</div>
 <h3 class="recent-headings">3 Most Recent Posts</h3>
 <% @three_posts.each_with_index do |post, index| %>
   <%= render partial: 'shared/post_layout', locals: {post: post, index: index} %>
