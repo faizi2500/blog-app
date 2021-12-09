@@ -15,14 +15,4 @@ class UsersController < ApplicationController
       @three_posts.push(val) if i < 3
     end
   end
-
-  # def calc_comments(user, post)
-  #   @comment_list
-  #   Comment.all.each do |comment|
-
-  # comments = Comment.where("post_id = ?", val.id)
-  # likes = Like.where("post_id = ?", val.id)
-  # @counts.push([comments, likes])
-  #   end
-  # end
 end
