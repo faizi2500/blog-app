@@ -1,3 +1,4 @@
+<%= render "shared/nav" %>
 <% @posts_by_user.each_with_index do |post, index| %>
   <%= render partial: 'shared/post_layout', locals: {post: post, index: index} %>
   <div class="comment-section">

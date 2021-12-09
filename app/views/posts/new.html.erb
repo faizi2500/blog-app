@@ -1,4 +1,5 @@
-<h2><%= @current.name %> what are you thinking today?</h2>
+<%= render "shared/nav" %>
+<h2><%= active_user.name %> what are you thinking today?</h2>
 <%= form_with model: @post, url: user_posts_path, remote: false do |form| %>
   <%= form.hidden_field :user_id, value: @current.id %>
   <div>
