@@ -1,0 +1,5 @@
+<%= render "shared/nav" %>
+<%= form_with model: @like, url: post_likes_path, remote: false do |form|%>
+  <%= form.hidden_field :post_id, value: @post.id %>
+  <%= form.submit "Like this post", data: {disable_with: "💖"} %>
+<%end%>
