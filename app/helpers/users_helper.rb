@@ -14,5 +14,4 @@ module UsersHelper
   def active_user
     @current = User.last
   end
-
 end

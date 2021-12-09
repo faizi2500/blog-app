@@ -5,15 +5,13 @@ class LikesController < ApplicationController
     @like = Like.new
   end
 
-  def create 
+  def create
     @like = Like.new(like_params)
     @like.user_id = current_user.id
-    @allLikes = Like.all 
+    @all_likes = Like.all
     @status = true
-    @allLikes.each do |each|
-      if @like.user_id == each.user_id && @like.post_id == each.post_id
-        @status = false
-      end
+    @all_likes.each do |each|
+      @status = false if @like.user_id == each.user_id && @like.post_id == each.post_id
     end
     if @status
       @like.save

@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
   def index
-    if !params[:user_id]
-      @posts_by_user = Post.all
-      render 'allposts'
-    else
+    if params[:user_id]
       @user = User.find(params[:user_id])
       calc_posts(@user)
+    else
+      @posts_by_user = Post.all
+      render 'allposts'
     end
   end
 
@@ -26,14 +26,12 @@ class PostsController < ApplicationController
       redirect_to user_posts_path(@post.user_id)
       flash[:message] = 'Post was successfully created.'
     else
-      render :new 
+      render :new
       flash[:message] = 'Post not created. Please try again!'
     end
-
   end
 
   def post_params
     params.require(:post).permit(:title, :text, :user_id)
   end
-
 end

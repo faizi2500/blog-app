@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-
   def index
     @urlarray = request.path.split('/')
     @post = Post.find(params[:post_id])
@@ -12,16 +11,16 @@ class CommentsController < ApplicationController
     render :new
   end
 
-  def create 
+  def create
     @comment = Comment.new(comment_params)
     if @comment.save
       redirect_to post_comments_path
       flash[:message] = 'Post was successfully created.'
     else
-      render :new 
+      render :new
       flash[:message] = 'Post not created. Please try again!'
+    end
   end
-end
 
   def comment_params
     params.require(:comment).permit(:text, :user_id, :post_id)
