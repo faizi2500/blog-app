@@ -1,0 +1,12 @@
+<div class = "row">
+  <div class = "image-container">
+    <p class = "image"><%= user.photo %></p1>
+  </div>
+
+  <div class = "user-content">
+    <a href='/users/<%= user.id %>'><h2 class = "user-name"><%= user.name %></h2></a>
+    <p class= "post-count">Number of posts <%= user.post_counter %></p>
+  </div>
+</div>
+
+<%= yield %>

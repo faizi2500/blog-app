@@ -1,2 +1,16 @@
-<h1>Posts of user</h1>
-<p>Following are the posts of user(Id)</p>
+<%= render partial: 'shared/user_layout', locals: {user: @user} %>
+<% @posts_by_user.each_with_index do |post, index| %>
+  <%= render partial: 'shared/post_layout', locals: {post: post, index: index} %>
+  <div class="comment-section">
+  <% post.recent_comments.each do |comment| %>
+    <%= render partial: 'shared/comment', locals: {comment: comment} %>
+  <% end %>
+  </div>
+  <div class="view-post">
+    <a href='<%= request.path %>/<%= post.id %>'>View Post <%= index + 1 %></a>
+  </div>
+<% end %>
+<div class="all-posts-cta">
+<button>Pagination</button>
+</div>
+<%= render partial: 'shared/footer' %>

@@ -1,0 +1,8 @@
+<div class="post-section">
+  <p>Post #<%= index + 1 %></p>
+  <p class="post-text"><%=post.text%> </p>
+  <div class="reaction">
+    <p> Likes: <%= all_likes(post.id) %></p>
+    <p> Comments:<%= all_comments(post.id) %></p>
+  </div>
+</div>

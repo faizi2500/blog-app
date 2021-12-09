@@ -1,2 +1,14 @@
-<h1>Users ID <%= params[:id] %><h1>
-<p>This user details</p>
+<%= render partial: 'shared/user_layout', locals: {user: @user} %>
+<div class="bio">
+<h4 class="bio-heading">Bio</h4>
+<p><%= @user.bio %></p>
+</div>
+<br>
+<h3 class="recent-headings">3 Most Recent Posts</h3>
+<% @three_posts.each_with_index do |post, index| %>
+  <%= render partial: 'shared/post_layout', locals: {post: post, index: index} %>
+<% end %>
+<div class="all-posts-cta">
+<a href='<%= request.path %>/posts'><button>See all Posts</button></a>
+</div>
+<%= render partial: 'shared/footer' %>
