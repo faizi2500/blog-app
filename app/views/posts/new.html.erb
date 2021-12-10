@@ -1,0 +1,15 @@
+<%= render "shared/nav" %>
+<h2><%= active_user.name %> what are you thinking today?</h2>
+<%= form_with model: @post, url: user_posts_path, remote: false do |form| %>
+  <%= form.hidden_field :user_id, value: @current.id %>
+  <div>
+  <%= form.label :title %><br>
+  <%= form.text_field :title %>
+  </div>
+  <br>
+  <div>
+  <%= form.label :text %><br>
+  <%= form.text_area :text, size: '70*20' %>
+  </div>
+  <%= form.submit "Post", disable_with: "Please wait..." %>
+<% end %>

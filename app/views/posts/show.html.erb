@@ -1,3 +1,4 @@
+<%= render "shared/nav" %>
 <div class="post-section give-space">
 <div class="first-half">
   <p class="heading-post">Post #<%= @post.id%> by <%= @user.name %></p>
@@ -13,4 +14,7 @@
   <% list_comments(@post.id).each do |comment| %>
     <%= render partial: 'shared/comment', locals: {comment: comment} %>
   <% end %>
+</div>
+<div class='all-posts-cta'>
+  <button class="btn"><%= link_to 'Comment', new_post_comment_path(@post.id) %></button>
 </div>

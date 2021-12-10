@@ -1,0 +1,17 @@
+<%= render "shared/nav" %>
+<div class="post-section give-space">
+  <div class="first-half">
+    <p class="heading-post">Post #<%= @post.id%></p>
+    <div class="right-side">
+      <p> Likes: <%= Like.where('post_id = ?', @post.id).count %></p>
+      <p> Comments:<%= Comment.where('post_id = ?', @post.id).count %></p>
+    </div>
+  </div>
+  <p><%= @post.text %></p>
+  </div>
+  
+  <div class="comment-section">
+    <% list_comments(@post.id).each do |comment| %>
+      <%= render partial: 'shared/comment', locals: {comment: comment} %>
+    <% end %>
+  </div>

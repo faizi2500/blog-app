@@ -2,6 +2,28 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black
+}
+
+a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.menu {
+  background-color: rgb(192, 192, 223);
+  justify-content: center;
+  gap: 2%;
+  display: flex;
+  flex: wrap;
+}
+
+.nav-color {
+  color: white;
+}
+
 .row {
   width: 95%;
   margin: 16px auto;
@@ -39,11 +61,15 @@ body {
   border-block: 2px solid black;
   padding: 12px;
   background-color: grey;
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+.empty-block {
+  margin-top: 2%;
 }
 
 .bio {

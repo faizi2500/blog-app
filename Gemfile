@@ -4,7 +4,7 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.2'
+ruby '2.7.0'
 
 # assert_template
 gem 'rails-controller-testing'
