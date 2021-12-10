@@ -29,9 +29,19 @@ To get a local copy up and running follow these simple example steps.
 - [Ruby on Rails](https://guides.rubyonrails.org/getting_started.html)
 
 ### Setup
+- Install rails by running `gem install rails`
+
 - ```git clone git@github.com:faizi2500/blog-app.git```
 
 - ```cd blog-app```
+
+- ```rails db:create```
+
+- ```rails db:migrate```
+
+- ```rails db:seed```
+
+- Run `rails s` and go to http:localhost:3000 to view the app.
 
 ### Running The App
 
