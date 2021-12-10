@@ -11,8 +11,13 @@ class PostsController < ApplicationController
 
   def show
     @urlarray = request.path.split('/')
-    @user = User.find(@urlarray[2])
-    @post = Post.find(params[:id])
+    if @urlarray[1] == 'users' 
+      @user = User.find(@urlarray[2])
+      @post = Post.find(params[:id])
+    else
+      @post = Post.find(params[:id])
+      @user = User.find(@post.user_id)
+    end
   end
 
   def new
@@ -22,12 +27,15 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if @post.save
+    @post.comments_counter = 0
+    @post.likes_counter = 0
+    if @post.valid?
+      @post.save
+      flash[:success] = 'Post was successfully created.'
       redirect_to user_posts_path(@post.user_id)
-      flash[:message] = 'Post was successfully created.'
     else
+      flash[:error] = 'Post not created. Please try again!'
       render :new
-      flash[:message] = 'Post not created. Please try again!'
     end
   end
 
