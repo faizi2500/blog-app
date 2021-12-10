@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   user = User.new(name: 'Faizan', bio: 'software developer', post_counter: 0, photo: 'user 1 photo')
-  
-  before (:each) do 
+
+  before(:each) do
     user.save
   end
   it 'name should be present' do
@@ -12,10 +12,10 @@ RSpec.describe User, type: :model do
   end
 
   it 'name should be present therfore entry should be valid' do
-    user.name = "Faizan"
+    user.name = 'Faizan'
     expect(user).to be_valid
   end
-  
+
   it 'post counter should not be negative' do
     user.post_counter = -1
     expect(user).to_not be_valid
@@ -27,8 +27,10 @@ RSpec.describe User, type: :model do
   end
 
   describe 'should test methods in post model' do
-    before (:each) do
-      5.times { |a| Post.create(text: "Hello#{a}", title: "title#{a}", comments_counter: 0, likes_counter: 0, user_id: user.id)}
+    before(:each) do
+      5.times do |a|
+        Post.create(text: "Hello#{a}", title: "title#{a}", comments_counter: 0, likes_counter: 0, user_id: user.id)
+      end
     end
     it 'post should have five recent comments' do
       expect(user.recent_posts).to eq(Post.where('user_id = ?', user.id).order(created_at: :desc).limit(3))

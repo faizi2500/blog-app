@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
-    
+
     if @comment.text.length > 3
       @comment.save
       flash[:message] = 'Post was successfully created.'

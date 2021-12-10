@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 
   def show
     @urlarray = request.path.split('/')
-    if @urlarray[1] == 'users' 
+    if @urlarray[1] == 'users'
       @user = User.find(@urlarray[2])
       @post = Post.find(params[:id])
     else
