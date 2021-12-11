@@ -5,10 +5,7 @@ class ApplicationController < ActionController::Base
   end
 
   def calc_posts(user)
-    @posts_by_user = []
-    Post.all.order('created_at DESC').each do |post|
-      @posts_by_user.push(post) if post.user_id == user.id
-    end
+    @posts_by_user = Post.includes(:user).where('user_id = ?', user.id).references(:user)
     user.post_counter = @posts_by_user.length
     user.save
     @posts_by_user
