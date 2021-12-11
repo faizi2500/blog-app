@@ -3,3 +3,12 @@
   <p class="nav-color"><%= link_to "All Posts", posts_path %></p>
   <p class="nav-color"><%= link_to "Create Post", new_user_post_path(active_user.id) %></p>
 </div>
+<div id="hideDiv" onload=('myfunction')>
+<% if flash.any? %>
+  <% flash.each do |type, msg| %>
+    <div>
+      <%= msg %>
+    </div>
+  <% end %>
+<% end %>
+</div>

@@ -11,3 +11,7 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+setTimeout(function(){ 
+  document.getElementById('hideDiv').style.display = 'none'; 
+}, 1000);

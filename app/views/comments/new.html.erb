@@ -1,10 +1,10 @@
 <%= render "shared/nav" %>
 <h1>Hello</h1>
 <h2><%= @current.name %> Engaging?</h2>
-<h2>Post: <%= @post.text %> </h2>
+<h2>Post: <%= post_text(params[:post_id]) %> </h2>
 <%= form_with model: @comment, url: post_comments_path, remote: false do |form| %>
   <%= form.hidden_field :user_id, value: @current.id %>
-  <%= form.hidden_field :post_id, value: @post.id %>
+  <%= form.hidden_field :post_id, value: params[:post_id] %>
   <div>
   <%= form.label :text, value: 'Comment' %><br>
   <%= form.text_area :text, size: '70*20' %>
