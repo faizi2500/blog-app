@@ -8,7 +8,7 @@ module UsersHelper
   end
 
   def list_comments(id)
-    Comment.where('post_id = ?', id).order('created_at DESC')
+    @comments = Comment.all.where(post_id: id).order('created_at DESC')
   end
 
   def active_user

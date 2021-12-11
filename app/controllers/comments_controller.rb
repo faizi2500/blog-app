@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
   def index
-    @urlarray = request.path.split('/')
     @post = Post.find(params[:post_id])
   end
 
