@@ -1,9 +1,6 @@
 class UsersController < ApplicationController
   def index
     @users = User.all
-    @users.each do |user|
-      calc_posts(user)
-    end
   end
 
   def show
