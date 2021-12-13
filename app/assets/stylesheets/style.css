@@ -2,6 +2,23 @@ body {
   margin: 0;
 }
 
+nav {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.nav-bar {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-bar li a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
 #hideDiv {
   background-color: rgb(192, 192, 223);
   width: 100%;
@@ -152,4 +169,49 @@ a:hover {
   width:30%;
   margin: auto;
   text-align: center;
+}
+
+.login-heading {
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  width: 100%;
+  display: flex;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form > * {
+  width: 60%;
+  margin-block: 10px;
+  padding: 10px 10px;
+}
+
+.login-headingone {
+  text-align: center;
+}
+
+.login-headingone > * {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.options {
+  width: 25%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

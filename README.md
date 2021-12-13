@@ -57,11 +57,20 @@ To get a local copy up and running follow these simple example steps.
 
 - Run ```rspec spec/name_of_test_file.rb``` to run test cases individually.
 
+## Authors
+
 👤 **Faizan Zahid**
 
 - GitHub: [@faizi2500 ](https://github.com/faizi2500)
 - Angelist: [@faizan_2500 ](https://angel.co/u/faizan2500)
 - LinkedIn: [@faizan2500](www.linkedin.com/in/faizan2500)
+
+👤 **Rida Arif**
+
+- GitHub: [@ridaarif98](https://github.com/ridaarif98)
+- Twitter: [@ridaarif](https://twitter.com/Rida29984906)
+- LinkedIn: [Rida Arif](https://www.linkedin.com/in/rida-arif-90945520b/)
+
 
 ## 🤝 Contributing
 
