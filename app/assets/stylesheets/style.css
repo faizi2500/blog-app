@@ -60,8 +60,11 @@ a:hover {
 }
 
 .image-container {
-  width: 24%;
+  width: 12%;
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image {
@@ -69,7 +72,7 @@ a:hover {
 }
 
 .user-content {
-  width: 73%;
+  width: 85%;
   border: 1px solid black;
   display: flex;
   justify-content: space-around;
