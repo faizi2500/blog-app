@@ -11,7 +11,7 @@ module UsersHelper
     @comments = Comment.all.where(post_id: id).order('created_at DESC')
   end
 
-  # def active_user
-  #   @current = User.last
-  # end
+  def active_user
+      current_user
+  end
 end
