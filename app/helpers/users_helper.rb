@@ -12,6 +12,6 @@ module UsersHelper
   end
 
   def active_user
-      current_user
+    current_user
   end
 end
