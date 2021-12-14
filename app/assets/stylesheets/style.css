@@ -14,9 +14,12 @@ nav {
   gap: 20px;
 }
 
+.nav-bar > * {
+  font-size: 20px;
+}
+
 .nav-bar li a {
   text-decoration: none;
-  font-size: 20px;
 }
 
 #hideDiv {
