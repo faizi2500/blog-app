@@ -7,6 +7,8 @@ class Post < ApplicationRecord
 
   belongs_to :user
 
+  after_create :update_counter
+
   def update_counter
     user.increment!(:post_counter)
   end

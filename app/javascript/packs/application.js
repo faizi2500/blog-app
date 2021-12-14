@@ -13,5 +13,6 @@ Turbolinks.start()
 ActiveStorage.start()
 
 setTimeout(function(){ 
-  document.getElementById('hideDiv').style.display = 'none'; 
+  document.getElementById('hideDiv').style.display = 'none';
+  document.getElementsByClassName('notice').style.display = 'none'; 
 }, 1000);
