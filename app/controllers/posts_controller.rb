@@ -42,4 +42,12 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :text, :user_id)
   end
+
+  def destroy
+    @post = Post.find(params[:id])
+    authorize! :destroy, @post
+    @post.destroy
+    flash[:success] = 'Post was successfully created.'
+    redirect_to user_posts_path(current_user.id)
+  end
 end

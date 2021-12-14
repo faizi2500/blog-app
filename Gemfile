@@ -8,6 +8,8 @@ ruby '2.7.0'
 
 gem 'devise'
 
+gem 'cancancan'
+
 # assert_template
 gem 'rails-controller-testing'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
