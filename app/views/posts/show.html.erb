@@ -5,6 +5,12 @@
   <div class="right-side">
     <p> Likes: <%= Like.where('post_id = ?', @post.id).count %></p>
     <p> Comments:<%= Comment.where('post_id = ?', @post.id).count %></p>
+
+    <%if can? :destroy, @post%>
+      <button>
+        <%=link_to "Delete", @post, method: :delete%>
+      </button>
+    <%end%>
   </div>
 </div>
 <p><%= @post.text %></p>
