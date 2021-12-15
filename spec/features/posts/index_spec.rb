@@ -41,27 +41,27 @@ RSpec.feature "User Show", type: :feature do
       expect(page).to have_content "Number of posts 4"
     end
 
-    it 'display post title' do
+    it 'display forth post title' do
       expect(page).to have_content @post_four.title
     end
 
-    it 'display post title' do
+    it 'display forth post text' do
       expect(page).to have_content @post_four.text
     end
 
-    it 'display post title' do
+    it 'display comment text' do
       expect(page).to have_content("Hello4")
     end
 
-    it 'display post title' do
+    it 'display comments count' do
       expect(page).to have_content("Comments:5")
     end
 
-    it 'display post title' do
+    it 'display likes count' do
       expect(page).to have_content("Likes: 1")
     end
 
-    it 'display the all posts path for first user' do
+    it 'Navigate to the specific post' do
       click_on('View Post 2')
       expect(page).to have_current_path("/users/#{@first_user.id}/posts/#{@post_two.id}")
   end
