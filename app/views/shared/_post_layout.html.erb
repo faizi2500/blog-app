@@ -1,5 +1,6 @@
 <div class="post-section">
   <p>Post #<%= index + 1 %></p>
+  <p><%= post.title %></p>
   <p class="post-text"><%=post.text%> </p>
   <div class="reaction">
     <p> <%= link_to "Likes:", new_post_like_path(post.id) %> <%= all_likes(post.id) %></p>
