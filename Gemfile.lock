@@ -266,7 +266,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   cancancan
-  capybara (>= 3.26)
+  capybara
   devise
   jbuilder (~> 2.7)
   listen (~> 3.3)
