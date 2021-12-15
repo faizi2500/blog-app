@@ -13,7 +13,6 @@ RSpec.describe Post, type: :model do
     expect(post).to_not be_valid
   end
 
-
   it 'likes counter should not be negative' do
     post.likes_counter = -1
     expect(post).to_not be_valid

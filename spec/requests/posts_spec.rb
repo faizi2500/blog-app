@@ -34,8 +34,8 @@ RSpec.describe 'Posts', type: :request do
   describe 'GET /index' do
     before do
       @post = Post.create(title: 'Cork', text: 'example@mail.com', user_id: user.id, likes_counter: 0, comments_counter: 0)
-        sign_in user
-        get user_post_path(user.id, @post.id)
+      sign_in user
+      get user_post_path(user.id, @post.id)
     end
     it 'check status' do
       expect(response).to have_http_status(:ok)
