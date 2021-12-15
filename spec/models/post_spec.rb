@@ -8,19 +8,9 @@ RSpec.describe Post, type: :model do
     post.save
   end
 
-  it 'post title should be valid' do
-    post.title = 'motivation'
-    expect(post).to be_valid
-  end
-
   it 'nil title should be invalid' do
     post.title = nil
     expect(post).to_not be_valid
-  end
-
-  it 'title with length less than 250 should be valid' do
-    post.title = 'motivation'
-    expect(post).to be_valid
   end
 
   it 'likes counter should not be negative' do
@@ -31,18 +21,6 @@ RSpec.describe Post, type: :model do
   it 'comments counter should not be negative' do
     post.comments_counter = -1
     expect(post).to_not be_valid
-  end
-
-  it 'likes counter should be positive' do
-    post.likes_counter = 1
-    post.comments_counter = 1
-    expect(post).to be_valid
-  end
-
-  it 'positive comments counter should be valid' do
-    post.comments_counter = 1
-    post.likes_counter = 1
-    expect(post).to be_valid
   end
 
   it 'title with length more than 250 should be invalid' do

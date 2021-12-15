@@ -11,19 +11,9 @@ RSpec.describe User, type: :model do
     expect(user).to_not be_valid
   end
 
-  it 'name should be present therfore entry should be valid' do
-    user.name = 'Faizan'
-    expect(user).to be_valid
-  end
-
   it 'post counter should not be negative' do
     user.post_counter = -1
     expect(user).to_not be_valid
-  end
-
-  it 'positive post counter should be valid' do
-    user.post_counter = 1
-    expect(user).to be_valid
   end
 
   describe 'should test methods in post model' do
