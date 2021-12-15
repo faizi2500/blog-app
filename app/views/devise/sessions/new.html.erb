@@ -2,9 +2,9 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class= "login-form">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Your User Email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Your User Email", id: 'email' %>
 
-    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Your Password" %>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Your Password", id: 'pwd' %>
 
   <% if devise_mapping.rememberable? %>
     <div class="field">
