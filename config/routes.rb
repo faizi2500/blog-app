@@ -6,6 +6,12 @@ Rails.application.routes.draw do
     resources :posts
   end
 
+  namespace :api, :defaults => {:format => :json} do
+    resources :posts do
+      resources :comments
+    end
+  end
+
   resources :posts do
     resources :comments
     resources :likes, only: %i[new create]
